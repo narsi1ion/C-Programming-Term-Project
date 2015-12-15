@@ -13,7 +13,7 @@ scanf( "%f %f %f %f", &result[0].X, &result[0].Y, &result[0].Z, &h );
 
 for(n=1;n<=maxn;n++){
     result[n] = RungeKutta(result[n-1],h);
-	printf("%f %f %f\n",result[n].X, result[n].Y, result[n].Z);
+	printf("%f %f %f %f\n",result[n].X, result[n].Y, result[n].Z, n*h);
 }
 
 
