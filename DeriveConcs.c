@@ -2,7 +2,7 @@
 #include <math.h>
 #include "Goodwin.h"
 
-conc DeriveConcs(A){
+conc DeriveConcs(conc A){
     conc result;
     result.X = V0/(1+pow((A.Z / Km),P)) - K1*A.X;
     result.Y = V1*A.X - K2*A.Y;

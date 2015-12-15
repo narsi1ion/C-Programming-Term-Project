@@ -1,9 +1,9 @@
-#include <stdio>
+#include <stdio.h>
 #include <math.h>
 #include "Goodwin.h"
 
 /*Given concs(t=0), derivatives of X,Y & Z, find concs(t=i)*/
-conc RungeKutta(A,h){
+conc RungeKutta(conc A,float h){
   conc result,k1,k2,k3,k4,temp;
   k1 = DeriveConcs(A);
   temp.X = A.X + h/2*k1.X;
