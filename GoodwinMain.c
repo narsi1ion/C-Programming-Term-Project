@@ -6,6 +6,7 @@ need constants (rates) for integration. Rather tha nhaving them floating around 
     Alternatively, in a header file, use defines to use preprocessor directives. So like, define v0 = 
 
 int main(){
+float h;    // h = timestep
 
 return 0;
 }

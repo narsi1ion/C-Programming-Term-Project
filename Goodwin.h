@@ -1,6 +1,8 @@
 typedef struct { float X,Y,Z; } conc;
 
-conc DeriveConcs(conc A);
+conc DeriveConcs( conc A );
+
+conc RungeKutta( conc A, float h);
 
 #define V0 0.5;
 #define V1 0.5;
