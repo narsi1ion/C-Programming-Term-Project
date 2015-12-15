@@ -2,11 +2,18 @@
 #include <math.h>
 #include "Goodwin.h"
 
-need constants (rates) for integration. Rather tha nhaving them floating around in RK fxn, have them get set in main, and then pass the struct containing the constants to the integrator. 
-    Alternatively, in a header file, use defines to use preprocessor directives. So like, define v0 = 
-
 int main(){
+
+const int maxn;
+int n;
 float h;    // h = timestep
+conc result[n];
+
+scanf( "%f%f%f%f", &result[0].X, &result[0].Y, &result[0].Z, &h );
+
+for(n=1;n<=maxn;n++){
+    result[n] = RungeKutta(result[n-1],h);
+}
 
 return 0;
 }
