@@ -4,15 +4,32 @@ conc DeriveConcs( conc A );
 
 conc RungeKutta( conc A, float h);
 
-#define V0 0.5
-#define V1 0.5
-#define V2 0.5
-#define K1 0.1
-#define K2 0.1
-#define K3 0.1 
-#define P 8.
-#define Km 0.5
+// Initial concentrations of X, Y, Z (mRNA conc., enzyme conc., inhibitor conc.)
+#define X0 0
+#define Y0 0
+#define Z0 0
 
-/*good range of all rate constants is 0-1
-*good range for p is like 5-15 let's say
-*good range for Km is 0 < Km <  50M*/
+// Number of timesteps (number of iterations)
+#define NTS 20000
+
+// Size of timesteps. 
+#define TS 0.1
+
+// Rate of mRNA production (transcription: input > 0)
+#define V0 0.5
+// Rate of mRNA degredation (input > 0)
+#define K1 0.1
+// Rate of enzyme production (translation: input > 0)
+#define V1 0.5
+// Rate of enzyme degredation (input > 0)
+#define K2 0.1
+// Rate of inhibitor activation (catalysis: input > 0)
+#define V2 0.5
+// Rate of inhibitor degredation (input > 0)
+#define K3 0.24
+
+// Hill constant. P > 8 leads to limit cycle.
+#define P 10.0
+
+// Michaelis constant. Affinity of inhibitor for gene. Input > 0. 
+#define Km 1.0
